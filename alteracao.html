@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+<head>
+    <!-- Metadados do documento -->
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva -->
+    <title>Chamado - Alteração de Senhas/E-mails</title> <!-- Título exibido na aba do navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS externo para estilização -->
+</head>
+<body>
+    <div class="container"> <!-- Div principal que agrupa todo o conteúdo da página -->
+        <h1>Abertura de Chamado - Alteração de Senhas/E-mails</h1> <!-- Cabeçalho principal da página -->
+
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <!-- Cada item do menu redireciona para uma página específica -->
+                <li><a href="index.html">Início</a></li>
+                <li><a href="hardware.html">Hardware</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="alteracao.html">Alteração de Senhas/E-mails</a></li>
+                <li><a href="outros.html">Outros</a></li>
+            </ul>
+        </nav>
+
+        <!-- Formulário para abrir um chamado -->
+        <form id="formChamado" class="formChamado" method="POST" action="salvar_chamado.php">
+            <!-- Campo para o nome do usuário -->
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" required> <!-- Campo de texto obrigatório -->
+            <br>
+
+            <!-- Campo para o setor do usuário -->
+            <label for="setor">Seu Setor:</label>
+            <input type="text" id="setor" name="setor" required> <!-- Campo de texto obrigatório -->
+            <br>
+
+            <!-- Campo para descrição do chamado -->
+            <label for="descricao">Descrição do Chamado:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea> <!-- Área de texto obrigatória -->
+            <br>
+
+            <!-- Campo para observações adicionais -->
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" rows="2"></textarea> <!-- Área de texto opcional -->
+            <br>
+
+            <!-- Botão para enviar o formulário -->
+            <button type="submit">Enviar Chamado</button>
+        </form>
+        
+        <!-- Div para exibir mensagens (ex.: sucesso ou erro no envio do formulário) -->
+        <div id="mensagem" class="mensagem"></div>
+    </div>
+
+    <!-- Inclusão do script JavaScript para funcionalidades da página -->
+    <script src="script.js"></script>
+</body>
+</html>

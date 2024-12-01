@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como Português do Brasil -->
+<head>
+    <!-- Metadados da página -->
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8, suportando caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva em dispositivos móveis -->
+    <title>Chamado - Software</title> <!-- Título da página, exibido na aba do navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula o arquivo de estilo CSS para formatação visual -->
+</head>
+<body>
+    <div class="container"> <!-- Div container que engloba todo o conteúdo da página -->
+        <h1>Abertura de Chamado - Software</h1> <!-- Cabeçalho principal da página, indicando a categoria de chamado -->
+
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <!-- Lista de links para outras páginas relacionadas a abertura de chamados -->
+                <li><a href="index.html">Início</a></li> <!-- Link para a página inicial -->
+                <li><a href="hardware.html">Hardware</a></li> <!-- Link para a página de chamados relacionados a Hardware -->
+                <li><a href="software.html">Software</a></li> <!-- Link para a página de chamados relacionados a Software -->
+                <li><a href="alteracao.html">Alteração de Senhas/E-mails</a></li> <!-- Link para a página de alteração de senhas e e-mails -->
+                <li><a href="outros.html">Outros</a></li> <!-- Link para a página de chamados gerais (outros) -->
+            </ul>
+        </nav>
+
+        <!-- Formulário para preenchimento do chamado -->
+        <form id="formChamado" class="formChamado" method="POST" action="salvar_chamado.php">
+            <!-- Campo para preenchimento do nome do usuário -->
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" required> <!-- Campo obrigatório para o nome -->
+            <br>
+
+            <!-- Campo para preenchimento do setor do usuário -->
+            <label for="setor">Seu Setor:</label>
+            <input type="text" id="setor" name="setor" required> <!-- Campo obrigatório para o setor -->
+            <br>
+
+            <!-- Campo para descrição detalhada do problema -->
+            <label for="descricao">Descrição do Chamado:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea> <!-- Campo obrigatório para descrever o chamado -->
+            <br>
+
+            <!-- Campo opcional para observações adicionais sobre o chamado -->
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" rows="2"></textarea> <!-- Campo opcional para observações -->
+            <br>
+
+            <!-- Botão para enviar o formulário -->
+            <button type="submit">Enviar Chamado</button>
+        </form>
+        
+        <!-- Div para exibir mensagens de resposta após o envio do formulário -->
+        <div id="mensagem" class="mensagem"></div>
+    </div>
+
+    <!-- Inclusão do script JavaScript para funcionalidades adicionais -->
+    <script src="script.js"></script>
+</body>
+</html>
